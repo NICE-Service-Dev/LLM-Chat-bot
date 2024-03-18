@@ -1,0 +1,128 @@
+{% block chat_list %}
+    <!-- chatlist -->
+    <div class="chatlist">
+        <div class="modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="chat-header">
+                    <div class="msg-search">
+                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="검색하기"
+                               aria-label="search">
+                        <a class="add" href="#"><img class="img-fluid"
+                                                     src="https://mehedihtml.com/chatbox/assets/img/add.svg" alt="add"></a>
+                    </div>
+
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="Open-tab" data-bs-toggle="tab" data-bs-target="#Open"
+                                    type="button" role="tab" aria-controls="Open" aria-selected="true">오픈됨
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="Closed-tab" data-bs-toggle="tab" data-bs-target="#Closed"
+                                    type="button" role="tab" aria-controls="Closed" aria-selected="false">끝남
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="modal-body">
+                    <!-- chat-list -->
+                    <div class="chat-lists">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="Open" role="tabpanel" aria-labelledby="Open-tab">
+                                <!-- chat-list -->
+                                <div class="chat-list">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid img-icon-small"
+                                                 src="/static/img/nice_logo.png"
+                                                 alt="user img">
+                                            <span class="active"></span>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h3>가맹점 1 관련 민원</h3>
+                                            <p>나이스 표준 전문</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid img-icon-small"
+                                                 src="/static/img/nice_logo.png"
+                                                 alt="user img">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h3>가맹점 2 관련 민원</h3>
+                                            <p>나이스 온라인 전문</p>
+                                        </div>
+                                    </a>
+
+
+                                </div>
+                                <!-- chat-list -->
+                            </div>
+                            <div class="tab-pane fade" id="Closed" role="tabpanel" aria-labelledby="Closed-tab">
+
+                                <!-- chat-list -->
+                                <div class="chat-list">
+                                    <a href="#" class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid img-icon-small"
+                                                 src="/static/img/nice_logo.png"
+                                                 alt="user img">
+                                            <span class="active"></span>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h3>표준전문 학습 모델</h3>
+                                            <p>대외계</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid img-icon-small"
+                                                 src="/static/img/nice_logo.png"
+                                                 alt="user img">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h3>승인계 선거절</h3>
+                                            <p>승인계</p>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="d-flex align-items-center">
+                                        <div class="flex-shrink-0">
+                                            <img class="img-fluid img-icon-small"
+                                                 src="/static/img/nice_logo.png"
+                                                 alt="user img">
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h3>승인계 원거래</h3>
+                                            <p>승인계</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                                <!-- chat-list -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- chat-list -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+
+            $(".chat-list a").click(function () {
+                $(".chatbox").addClass('showbox');
+                return false;
+            });
+
+            $(".chat-icon").click(function () {
+                $(".chatbox").removeClass('showbox');
+            });
+
+        });
+    </script>
+    <!-- chatlist -->
+{% endblock chat_list %}

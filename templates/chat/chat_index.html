@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %} NICE CHAT {% endblock title %}
+{% block subtitle %} NICE CHAT {% endblock subtitle %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <div class="chat-area">
+                {% block chat_list %}
+                    {% include "chat/chat_list.html" %}
+                {% endblock chat_list %}
+                {% block chat_box %}
+                    {% include "chat/chat_box.html" %}
+                {% endblock chat_box %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
