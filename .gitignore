@@ -1,1 +1,8 @@
+##제외할 확장자
+*.pyc
 .env
+
+##제외할 패키지내부파일.
+venv/*
+*/site-packages/*
+.idea/*
