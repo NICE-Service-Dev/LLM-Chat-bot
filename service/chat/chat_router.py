@@ -4,6 +4,8 @@
 from fastapi import APIRouter, WebSocket, Depends, Request,FastAPI
 from fastapi.templating import Jinja2Templates
 
+from bbs.gpt_ai import generate_completion, print_received_data, send_response, gpt_create
+
 """CHAT 서비스 import"""
 import service.chat.chat_svc as svc
 from core import util
@@ -27,6 +29,4 @@ async def post_create_ai(websocket: WebSocket):
         print(f"WebSocket server recv : msg [{msg}], subject [{subject}]")
 
         # chat gpt 로 보내기
-
-        await websocket.send_text(f"질문 : [{msg}], 주제 : [{subject}]")
-
+        await websocket.send_text(f"{gpt_create(msg)}")
